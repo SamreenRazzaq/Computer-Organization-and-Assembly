@@ -1,0 +1,40 @@
+;PRACTICE CODE
+
+;TITLE MASM Template   (mainhh.asm)
+;INCLUDE Irvine32.inc
+;.data 
+;myMessage BYTE "Hello World!",0dh,0ah,0
+;.code
+;mainhh PROC
+;mov edx,OFFSET myMessage
+;call WriteString 
+;exit
+;mainhh ENDP
+;END mainhh
+
+; Practice2 
+INCLUDE Irvine32.inc
+
+.data
+val1 DWORD 10000h
+val2 DWORD 40000h
+val3 DWORD 20000h
+finalVal DWORD ?
+
+
+;value1 Byte "HELLO WORLD",0dh,0ah,"1.Create a new account",0dh,0ah,"2.Create 2nd account",0
+;value2 Byte "I am Pakistani",0dh,0ah,0
+.code
+main PROC
+	mov eax,val1
+	add eax,val2
+	sub eax,val3
+	mov finalVal,eax
+	call dumpregs
+	;mov edx,OFFSET value1
+	;call writestring
+	;mov edx,OFFSET value2
+	;call writestring
+	exit
+main ENDP
+END main

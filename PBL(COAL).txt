@@ -1,0 +1,23 @@
+;PBL:
+
+INCLUDE Irvine32.inc
+.data
+a DWORD 10
+b DWORD 5
+e DWORD 3
+d DWORD 2
+.code
+main PROC
+	mov eax,a
+	add eax,b
+	mov ebx,e
+	add ebx,d
+	sub eax,ebx
+	mov a,eax
+	call WriteInt
+	mov eax,0
+main ENDP
+END main
+
+
+
